@@ -7,6 +7,44 @@ Implementation of [L Commands](https://github.com/vicky002/L-Commands)
 * Linux Operating System
 * Python 2.7
 
+### HOW TO SETUP
+
+It is recommended to install this package in [virtualenv](https://virtualenv.pypa.io/en/stable/)
+```
+	# Install virtualenv
+	sudo apt-get install python-virtualenv
+	or
+	sudo pip install virtualenv
+
+	# create and activate virtualenv
+
+	virtualenv ~/env
+	source ~/env/bin/activate
+
+	# To install this package
+	git clone https://github.com/rajmani1995/L-Commands.git
+	cd L-Commands
+	python setup.py install
+
+```
+
+### Contributing
+
+* Fork this repository and create a new branch and commit your changes and send pull request
+
+```
+	git clone https://github.com/<username>/L-Commands.git
+	git remote add upstream https://github.com/<username>/L-Commands
+
+	# stay updated with master branch
+	git pull upstream master
+	# create branch, add changes and send PR
+	git checkout -b SomeNewFeature
+	git commit -m "made some changes"
+	git push origin SomeNewFeature
+	# Go to repository url and create Pull request
+```
+
 ## open command
 To open any file or directory in Ubuntu
 
