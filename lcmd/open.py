@@ -10,28 +10,31 @@ import tempfile
 from subprocess import call
 
 def main():
-	description="Open file in any text editor"
+	description="Open file in any text editor or folder in explorer"
 	parser = argparse.ArgumentParser(description=description)
 	parser.add_argument("-e", "--editor", type=str, help="Provide existing editor e.g, -e nano or -e vi")
-	parser.add_argument("filename", type=str, help="Provide filename to edit")
+	parser.add_argument("filename", type=str, help="Provide filename to edit or Folder")
 	args = parser.parse_args()
 	# print args.editor, args.filename
 	prev_data = ''
-	if os.path.isfile(args.filename):
+	if os.path.isfile(args.filename) and os.path.isdir(args.filename)==False:
 		f = open (args.filename, 'r')
 		prev_data = f.read()
 		f.close()
 
-	editor = args.editor if args.editor else 'vi'
+		editor = args.editor if args.editor else 'vi'
 
-	with tempfile.NamedTemporaryFile(suffix=args.filename) as tf:
-		tf.write(prev_data)
-		tf.flush()
-		call([editor, tf.name])
-		tf.seek(0)
-		final_data = tf.read()
-		with open(args.filename, 'w') as f:
-			f.write(final_data)
+		with tempfile.NamedTemporaryFile(suffix=args.filename) as tf:
+			tf.write(prev_data)
+			tf.flush()
+			call([editor, tf.name])
+			tf.seek(0)
+			final_data = tf.read()
+			with open(args.filename, 'w') as f:
+				f.write(final_data)
+	else:
+		call(['gnome-open', args.filename])
+
 
 	sys.exit(0)
 

@@ -11,7 +11,7 @@ setup(
         name="lcmd",
         version=the_version,
         description="Powerful linux commands simplified",
-        url="https://github.com/rajmani1995/LCmd.git",
+        url="https://github.com/rajmani1995/L-Commands.git",
         author="Rajmani Arya",
         author_email="rajmani1995@gmail.com",
         license='MIT',

@@ -6,6 +6,11 @@ Implementation of [L Commands](https://github.com/vicky002/L-Commands)
 
 * Linux Operating System
 * Python 2.7
+* libgnome2-bin ( for opening file explorer with command )
+
+```
+   sudo apt-get install libgnome2-bin
+```
 
 ### HOW TO SETUP
 
@@ -51,7 +56,7 @@ To open any file or directory in Ubuntu
 | Command Name | Use | status|
 |--------------|:-----:|------:|
 |`open filename`| Open a given filename in any editor| done
-|`open folder foldername`|Open a given directory in file manager| pending
+|`open folder foldername`|Open a given directory in file manager| done
 
 ## search command
 
