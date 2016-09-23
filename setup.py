@@ -2,14 +2,11 @@
 
 #@author Rajmani Arya
 
-from setuptools import setup
-
-the_version = open("VERSION").read().strip()
-print "Packaging the version " + the_version
+from distutils.core import setup
 
 setup(
         name="lcmd",
-        version=the_version,
+        version="0.0.1",
         description="Powerful linux commands simplified",
         url="https://github.com/rajmani1995/L-Commands.git",
         author="Rajmani Arya",
