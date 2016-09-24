@@ -1,5 +1,7 @@
 # Powerful L Commands
 
+[![PyPI version](https://badge.fury.io/py/python-loklak-api.svg)](https://pypi.python.org/pypi/lcmd/0.0.1)
+
 Implementation of [L Commands](https://github.com/vicky002/L-Commands)
 
 ### Requirements
@@ -10,6 +12,12 @@ Implementation of [L Commands](https://github.com/vicky002/L-Commands)
 
 ```
    sudo apt-get install libgnome2-bin
+```
+
+### Install with pip
+
+```
+	pip install lcmd
 ```
 
 ### HOW TO SETUP
